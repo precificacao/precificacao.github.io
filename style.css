@@ -1,0 +1,215 @@
+/* GlobalStyle */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilização do corpo do site */
+
+body{
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.6rem;
+}
+
+html{
+    font-size: 62.5%;
+    @media (max-width: 768px) {
+        html{
+          font-size: 50%;
+        }}
+  }
+
+/* Estilização do header - Top do site - Logo - Menu de navegação */
+
+header {
+    background-color: #e29a96;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+  }
+  
+  .sessaoHeader {
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .imgCabecalho {
+    border-radius: 16px;
+    height: 75px;
+    padding: 10px;
+  }
+  
+  .menuHeader {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #65823a;
+    border-radius: 16px 16px 0 0;
+    align-self: flex-end;
+  }
+  
+  .itemMenuHeader {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #f9ebea;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  li a:hover{
+    background-color: #ca4941;
+  }
+
+/* Estilização da sessão de apresentação do App - link para baixar o app */
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sessaoApresentacaoHome {
+    background-color: #c4352c;
+    color: #3B3B3B;
+}
+
+.containerApresentacao {
+    background-color: #ccd5bd;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+}
+
+.boxTextoApresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tituloApresenta {
+    margin: 10px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.textoApresenta {
+    text-align: justify;
+    margin: 5px 15px 10px 10px;
+}
+
+.botaoApresenta {
+    background-color: #c4352c;
+    border-radius: 20px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #F7F7F7;
+}
+
+.imgapresentacao {
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+/* Estilização da sessão de funcionalidades do app */
+
+.sessaoInfoApp {
+    background-color: #547424;
+    color: #3B3B3B;
+}
+
+.containerCalculo {
+    background-color: #edc2c0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    /* padding: 10px; */
+}
+
+.boxTextoCalculo {
+    display: flex;
+}
+
+.imgCalculo {
+    max-height: 300px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.textoCalcular {
+    text-align: justify;
+    margin: 5px 15px 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.subtitulo {
+    text-align: center;
+}
+
+.boxTextoFuncionalidades {
+    display: flex;
+    background-color: #e29a96;
+    margin: 0;
+}
+
+/* Estilização de Oferta - Convite para a utilização do APP */
+
+.sessaoOferta {
+    background-color: #ca4941;
+    color: #3B3B3B;
+    width: 100%;
+}
+
+.boxOferta {
+    background-color: #ccd5bd;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.textoOferta {
+    margin: 15px 10px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Estilização do Rodapé */
+
+footer {
+    background-color: #111;
+    color: #f7f7f7;
+    padding: 30px;
+}
+
+.sectionFooter {
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoFooter {
+    height: 75px;
+}
