@@ -72,6 +72,7 @@ li a {
   text-align: center;
   padding: 10px;
   text-decoration: none;
+  transition-duration: 0.4s;
 }
 
 li a:hover{
