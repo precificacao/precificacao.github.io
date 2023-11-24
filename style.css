@@ -213,3 +213,16 @@ footer {
 .logoFooter {
     height: 75px;
 }
+
+.listaMenuFooter {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .linkNavegaFooter a {
+    text-decoration: none;
+    text-align: left;
+  }
