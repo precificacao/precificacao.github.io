@@ -66,6 +66,7 @@ header {
     text-align: center;
     padding: 10px;
     text-decoration: none;
+    transition-duration: 0.4s;
   }
   
   li a:hover{
@@ -113,7 +114,7 @@ main {
 }
 
 .botaoApresenta {
-    background-color: #c4352c;
+    background-color:#ca4941;
     border-radius: 20px;
     border: none;
     padding: 15px 32px;
@@ -123,6 +124,12 @@ main {
     font-size: 16px;
     font-weight: 700;
     color: #F7F7F7;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.botaoApresenta:hover {
+    background-color:#547424;
 }
 
 .imgapresentacao {
