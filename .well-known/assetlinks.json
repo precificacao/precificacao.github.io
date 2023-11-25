@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.luhribeiro.precificacao",
+      "sha256_cert_fingerprints":
+      ["7A:55:28:58:B9:22:A8:16:12:E9:1B:BA:B3:91:C3:A7:5D:FE:BE:C9:3B:E0:C1:5E:14:DE:9A:3C:FC:74:53:6A"]
+    }
+  }]
+  
