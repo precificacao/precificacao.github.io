@@ -28,13 +28,14 @@ html{
 header {
     background-color: #e29a96;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     top: 0;
+    display: flex;
+    justify-content: center;    
   }
   
   .sessaoHeader {
-    margin: 0 10%;
+    max-width: 1260px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,7 +44,8 @@ header {
   .imgCabecalho {
     border-radius: 16px;
     height: 75px;
-    padding: 10px;
+    padding: 10px 0;
+    margin-left: 5px;
   }
   
   .menuHeader {
@@ -80,19 +82,23 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .sessaoApresentacaoHome {
     background-color: #c4352c;
     color: #3B3B3B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .containerApresentacao {
     background-color: #ccd5bd;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 10px;
+    max-width: 1260px;
+    /* padding: 10px; */
 }
 
 .boxTextoApresentacao {
@@ -134,6 +140,8 @@ main {
 
 .imgapresentacao {
     max-height: 350px;
+    height: 35vw;
+    margin: 10px;
     border-radius: 10px;
 }
 
@@ -148,8 +156,7 @@ main {
     background-color: #edc2c0;
     display: flex;
     flex-direction: column;
-    margin: 0 10%;
-    /* padding: 10px; */
+    max-width: 1260px;
 }
 
 .boxTextoCalculo {
@@ -158,6 +165,7 @@ main {
 
 .imgCalculo {
     max-height: 300px;
+    height: 35vw;
     border-radius: 10px;
     margin: 10px;
 }
@@ -184,14 +192,17 @@ main {
 .sessaoOferta {
     background-color: #ca4941;
     color: #3B3B3B;
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
 .boxOferta {
     background-color: #ccd5bd;
+    max-width: 1260px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 10%;
     align-items: center;
     padding-bottom: 15px;
 }
@@ -208,13 +219,22 @@ main {
 footer {
     background-color: #111;
     color: #f7f7f7;
-    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .sectionFooter {
-    margin: 0 10%;
+    max-width: 1260px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+
+}
+
+.sectionFooter div {
+    margin: 30px;
 }
 
 .logoFooter {

@@ -16,16 +16,11 @@ body{
 }
 
 html{
-  font-size: 70%;
+  font-size: 62.5%;
   @media (max-width: 768px) {
       html{
         font-size: 50%;
       }}
-  @media (max-width: 480px) {
-    html{
-      font-size: 35%;
-    }
-  }
 }
 
 /* Estilização do header - Top do site - Logo - Menu de navegação */
@@ -39,8 +34,7 @@ header {
 }
 
 .sessaoHeader {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
