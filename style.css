@@ -28,92 +28,183 @@ html{
 header {
     background-color: #e29a96;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     top: 0;
+    display: flex;
+    justify-content: center;    
   }
   
-  .sessaoHeader {
-    margin: 0 10%;
+  .header__box {
+    max-width: 1000px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 650px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  .header__box__initial {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
-  .imgCabecalho {
+  .header__box__img {
     border-radius: 16px;
     height: 75px;
-    padding: 10px;
+    padding: 10px 0;
+    margin-left: 5px;
+    transition-duration: 0.4s;
+    @media (max-width: 900px) {
+        height: 55px;
+    }
+  }
+
+  .header__box__titulo {
+    font-size: 32px;
+    transition-duration: 0.4s;
+    @media (max-width:900px){
+        font-size: 28px;
+    }
+    @media (max-width: 750px) {
+        font-size: 22px;
+    }
+  }
+
+  #menu__click {
+    background-color: #65823a;
+    color: #f9ebea;
+    border-radius: 3px;
+    padding: 5px 0;
+    cursor: pointer;
+    display: none;
+    @media (max-width: 650px) {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+  #menu__click :hover {
+    background-color: #ca4941;
   }
   
-  .menuHeader {
+  .header__box__menu {
+      align-self: flex-end;
+      @media (max-width: 650px) {
+        display: none;
+        align-self: center;
+        width: 100%;
+      }
+  }
+
+  .header__box__menu_lista {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #65823a;
     border-radius: 16px 16px 0 0;
-    align-self: flex-end;
+    cursor: pointer;
+    @media (max-width: 650px) {
+        flex-direction: column;
+        border-radius: 3px;
+    }
   }
   
-  .itemMenuHeader {
+  .header__box__menu__lista__link {
     float: left;
   }
   
-  li a {
+  li > a {
     display: block;
     color: #f9ebea;
     text-align: center;
     padding: 10px;
     text-decoration: none;
     transition-duration: 0.4s;
+    @media (max-width: 900px) {
+        padding: 7px;
+    }
+    @media (max-width: 650px) {
+        border: 1px solid #f7f7f7;
+    }
   }
   
-  li a:hover{
+  li > a:hover{
     background-color: #ca4941;
   }
 
-/* Estilização da sessão de apresentação do App - link para baixar o app */
+/* Conteúdo da Main - Estilização da sessão de apresentação do App - link para baixar o app */
 
 main {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.sessaoApresentacaoHome {
+.main__section__coverpage {
     background-color: #c4352c;
     color: #3B3B3B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.containerApresentacao {
+.main__section__coverpage__container {
     background-color: #ccd5bd;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 10px;
+    max-width: 1000px;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 
-.boxTextoApresentacao {
+.main__section__coverpage__container__box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 
-.tituloApresenta {
+.main__section__coverpage__container__box__titulo {
     margin: 10px;
     font-size: 32px;
     text-align: center;
+    transition-duration: 0.4s;
+    @media (max-width: 992px) {
+        font-size: 26px;
+    }
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
 }
 
-.textoApresenta {
+.main__section__coverpage__container__box__texto {
     text-align: justify;
     margin: 5px 15px 10px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition-duration: 0.4s;
+    @media (max-width: 992px) {
+        font-size: 16px;
+    }
+    @media (max-width: 768px) {
+        font-size: 14px;
+        font-weight: 500;
+    }
 }
 
-.botaoApresenta {
+.main__section__coverpage__container__box__button {
     background-color:#ca4941;
     border-radius: 20px;
     border: none;
@@ -126,102 +217,152 @@ main {
     color: #F7F7F7;
     transition-duration: 0.4s;
     cursor: pointer;
+    @media (max-width: 992px) {
+        padding: 12px 28px;
+        font-size: 14px;
+        margin: 15px 0;
+    }
 }
 
-.botaoApresenta:hover {
+.main__section__coverpage__container__box__button:hover {
     background-color:#547424;
 }
 
-.imgapresentacao {
+.main__section__coverpage__container__img {
     max-height: 350px;
+    height: 35vw;
+    margin: 10px;
     border-radius: 10px;
+    @media (max-width: 768px) {
+        height: 90vw;
+        margin: 0;
+    }
 }
 
-/* Estilização da sessão de funcionalidades do app */
+/* Conteúdo da Main - Estilização da sessão de funcionalidades do app */
 
-.sessaoInfoApp {
+.main__section__infoApp {
     background-color: #547424;
     color: #3B3B3B;
 }
 
-.containerCalculo {
+.main__section__infoApp__container {
     background-color: #edc2c0;
     display: flex;
     flex-direction: column;
-    margin: 0 10%;
-    /* padding: 10px; */
+    max-width: 1000px;
 }
 
-.boxTextoCalculo {
+.main__section__infoApp__container__box1 {
     display: flex;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.imgCalculo {
+.main__section__infoApp__container__box1__img {
     max-height: 300px;
+    height: 35vw;
     border-radius: 10px;
     margin: 10px;
+    @media (max-width: 768px) {
+        height: 90vw;
+        margin: 0;
+    }
 }
 
-.textoCalcular {
-    text-align: justify;
-    margin: 5px 15px 10px 15px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.subtitulo {
+.main__section__infoApp__container__box1__subtitle {
     text-align: center;
+    @media (max-width: 768px) {
+        margin: 15px 0;
+    }
 }
 
-.boxTextoFuncionalidades {
+.main__section__infoApp__container__box2 {
     display: flex;
     background-color: #e29a96;
     margin: 0;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 
 /* Estilização de Oferta - Convite para a utilização do APP */
 
-.sessaoOferta {
+.main__section__offer {
     background-color: #ca4941;
     color: #3B3B3B;
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
-.boxOferta {
+.main__section__offer__box {
     background-color: #ccd5bd;
+    max-width: 1000px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 10%;
     align-items: center;
     padding-bottom: 15px;
 }
 
-.textoOferta {
-    margin: 15px 10px;
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
-}
 
 /* Estilização do Rodapé */
 
 footer {
     background-color: #111;
     color: #f7f7f7;
-    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.sectionFooter {
-    margin: 0 10%;
+.footer_section {
+    max-width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.logoFooter {
+.footer_section > div {
+    margin: 30px;
+    @media (max-width: 768px) {
+        margin: 10px;
+    }
+}
+
+.footer_section_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_section__box__img {
     height: 75px;
+    @media (max-width: 768px) {
+        align-self: center;
+    }
 }
 
-.listaMenuFooter {
+.footer_section_box > h3 {
+    align-self: flex-start;
+    @media (max-width: 768px) {
+        align-self: center;
+    }
+}
+
+.footer_section_box_links {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -229,7 +370,11 @@ footer {
     border-radius: 16px 16px 0 0;
   }
   
-  .linkNavegaFooter a {
+  .footer_section_box_links__link a {
     text-decoration: none;
     text-align: left;
+    border: 0;
+    @media (max-width: 768px) {
+        text-align: center;
+    }
   }

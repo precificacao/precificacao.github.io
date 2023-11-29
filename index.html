@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pr-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,32 +12,71 @@
       property="og:description"
       content="Precificação - Aplicativo de formação de preço de venda de produtos culinários, artesanato e afins"
     />
+    <!-- Ícone de aba -->
+    <link
+      rel="shortcut icon"
+      type="imagex/png"
+      href="/public/assets/img/PrecificAcao-fivcon.ico"
+    />
+
+    <!-- Arquivos de estilo e JS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Para utilizar íicones disponibilizados do Google -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Título da página atual -->
     <title>Precificação</title>
   </head>
-  <body>
+  <body onresize="changeSize()">
     <header>
-      <div class="sessaoHeader">
-        <img
-          src="../public/assets/img/Logo-PrecificAcao.png"
-          alt="Logomarca Precificação - imagem de cabeçalho"
-          class="imgCabecalho"
-        />
-        <h1>PrecificAção</h1>
-        <ul class="menuHeader">
-          <li class="itemMenuHeader"><a href="/">Home</a></li>
-          <li class="itemMenuHeader"><a href="/passo-a-passo/index.html">Passo a Passo</a></li>
-          <li class="itemMenuHeader"><a href="/termos-de-uso-e-politica-de-privacidade/index.html">Termo de Uso</a></li>
-        </ul>
+      <div class="header__box">
+        <div class="header__box__initial">
+          <img
+            class="header__box__img"
+            src="../public/assets/img/Logo-PrecificAcao.png"
+            alt="Logomarca Precificação - imagem de cabeçalho"
+          />
+
+          <h1 class="header__box__titulo">PrecificAção</h1>
+        </div>
+
+        <i id="menu__click" class="material-icons" onclick="clickMenu()">
+          menu
+        </i>
+
+        <menu id="itens" class="header__box__menu">
+          <ul class="header__box__menu_lista">
+            <li class="header__box__menu__lista__link">
+              <a href="/"> Home </a>
+            </li>
+
+            <li class="header__box__menu__link">
+              <a href="/passo-a-passo/index.html"> Passo a Passo </a>
+            </li>
+
+            <li class="header__box__menu__link">
+              <a href="/termos-de-uso-e-politica-de-privacidade/index.html">
+                Termo de Uso
+              </a>
+            </li>
+          </ul>
+        </menu>
       </div>
     </header>
     <main>
-      <section class="sessaoApresentacaoHome">
-        <div class="containerApresentacao">
-          <div class="boxTextoApresentacao">
-            <h1 class="tituloApresenta">App Precificação</h1>
+      <section class="main__section__coverpage">
+        <div class="main__section__coverpage__container">
+          <div class="main__section__coverpage__container__box">
+            <h2 class="main__section__coverpage__container__box__titulo">
+              App Precificação
+            </h2>
 
-            <h3 class="textoApresenta">
+            <p class="main__section__coverpage__container__box__texto">
               App PrecificAção - Calcule facilmente os preços dos produtos ou
               serviços em um aplicativo simples e completo. Com o nosso
               aplicativo interativo PrecificAção, mesmo cálculos complexos se
@@ -45,36 +84,40 @@
               claramente. Após calcular o preço, você pode criar uma cotação
               durante um atendimento com o cliente e enviá-la diretamente ao seu
               cliente potencial.
-            </h3>
+            </p>
 
-            <a href="https://play.google.com/store/apps/details?id=com.luhribeiro.precificacao">
-              <button class="botaoApresenta">Comece Agora</button>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.luhribeiro.precificacao"
+            >
+              <button class="main__section__coverpage__container__box__button">
+                Comece Agora
+              </button>
             </a>
           </div>
           <div>
             <img
               src="public/assets/img/precificacao-apresentacao.jpg"
               alt="Logomarca Precificação - imagem de Apresentação"
-              class="imgapresentacao"
+              class="main__section__coverpage__container__img"
             />
           </div>
         </div>
       </section>
 
-      <section class="sessaoInfoApp">
-        <div class="containerCalculo">
-          <div class="boxTextoCalculo">
+      <section class="main__section__infoApp">
+        <div class="main__section__infoApp__container">
+          <div class="main__section__infoApp__container__box1">
             <img
               src="/public/assets/img/precificacao-como-calcular-venda.jpg"
               alt="precificação, como calcular o preço de venda de produtos"
-              class="imgCalculo"
+              class="main__section__infoApp__container__box1__img"
             />
 
-            <div class="boxTextoApresentacao">
-              <h1 class="tituloApresenta">
+            <div class="main__section__coverpage__container__box">
+              <h1 class="main__section__coverpage__container__box__titulo">
                 Como calcular o preço individual de um produto?
               </h1>
-              <p class="textoCalcular">
+              <p class="main__section__coverpage__container__box__texto">
                 Especialmente com custos flutuantes de material e
                 desenvolvimento, custos fixos e variáveis, matéria prima, mão de
                 obra etc. O preço é muitas vezes um dos tópicos mais importantes
@@ -84,79 +127,87 @@
                 alimentação ou serviços você terá controle do lucro de seu
                 negócio.
               </p>
-              <h3 class="subtitulo">
+              <h3 class="main__section__infoApp__container__box1__subtitle">
                 No App PrecificAção você poderá obter todos esses cálculos<br />de
                 forma simples e completa!
               </h3>
             </div>
           </div>
 
-          <div class="boxTextoFuncionalidades">
-            <div class="boxTextoApresentacao">
-              <h3 class="tituloApresenta">Algumas Funcionalidades</h3>
+          <div class="main__section__infoApp__container__box2">
+            <div class="main__section__coverpage__container__box">
+              <h3 class="main__section__coverpage__container__box__titulo">
+                Algumas Funcionalidades
+              </h3>
 
-              <p class="textoCalcular">
+              <p class="main__section__coverpage__container__box__texto">
                 - Precificação - Leve em consideração todos os custos envolvidos
                 na produção e venda de seus produtos (custos fixos e variáveis)
               </p>
 
-              <p class="textoCalcular">
+              <p class="main__section__coverpage__container__box__texto">
                 - Receitas - Sejam receitas culinárias ou receitas de
                 artesanato, seu negócio poderá ter uma lista do que seu produto
                 precisa para ser produzido e o custo de cada ítem
               </p>
 
-              <p class="textoCalcular">
+              <p class="main__section__coverpage__container__box__texto">
                 - Orçamento - Com seus produtos cadastrados, e todos os custos e
                 lucro definidos, poderá gerar orçamentos completos para seus
                 clientes, sem medo de errar na hora de dar o preço pelo seu
                 produto/serviço
               </p>
 
-              <p class="textoCalcular">
+              <p class="main__section__coverpage__container__box__texto">
                 - E muito mais, seu negócio no seu controle
               </p>
             </div>
             <img
               src="/public/assets/img/App-Precificacao-Funcionalidades.jpg"
               alt="App Precificação - algumas funcionalidades do palicativo de cálculo de preço de venda"
-              class="imgCalculo"
+              class="main__section__coverpage__container__img"
             />
           </div>
         </div>
       </section>
 
-      <section class="sessaoOferta">
-        <div class="boxOferta">
-          <h1 class="tituloApresenta">Experimente Grátis</h1>
-          <p class="textoOferta">
+      <section class="main__section__offer">
+        <div class="main__section__offer__box">
+          <h1 class="main__section__coverpage__container__box__titulo">
+            Experimente Grátis
+          </h1>
+          <p class="main__section__coverpage__container__box__texto">
             Crie uma conta gratuita, aproveite suas funcionalidades e<br />aumente
             seus resultados de forma equilibrada.
           </p>
-          <a href="https://play.google.com/store/apps/details?id=com.luhribeiro.precificacao">
-            <button class="botaoApresenta">Começar Agora</button>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.luhribeiro.precificacao"
+          >
+            <button class="main__section__coverpage__container__box__button">
+              Começar Agora
+            </button>
           </a>
         </div>
       </section>
     </main>
     <footer>
-      <section class="sectionFooter">
-        <div>
+      <section class="footer_section">
+        <div class="footer_section_box">
           <img
             src="/public/assets/img/Logo-PrecificAcao.png"
             alt="Logomarca Precificação - Rodapé da página"
-            class="logoFooter"
+            class="footer_section__box__img"
           />
           <h3>App PrecificAção</h3>
         </div>
-        <div>
+        <div class="footer_section_box">
           <h3>Sobre</h3>
-          <ul class="listaMenuFooter">
-            <li class="linkNavegaFooter"><a href="/">Home</a></li>
-            <li class="linkNavegaFooter">
+          <ul class="footer_section_box_links">
+            <li class="footer_section_box_links__link"><a href="/">Home</a></li>
+            <li class="footer_section_box_links__link">
               <a href="/passo-a-passo/index.html" class="link">Passo a Passo</a>
             </li>
-            <li class="linkNavegaFooter">
+            <li class="footer_section_box_links__link">
               <a href="/termos-de-uso-e-politica-de-privacidade/index.html"
                 >Política de Privacidade</a
               >
@@ -165,10 +216,10 @@
         </div>
         <div>
           <h3>Entre em contato conosco</h3>
-          <h5>Email:</h5>
-          <p>contato@precificacao.app</p>
+          <p><strong>E-mail:</strong> contato@precificacao.app</p>
         </div>
       </section>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
