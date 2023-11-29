@@ -23,104 +23,37 @@ html{
       }}
 }
 
-/* Estilização do header - Top do site - Logo - Menu de navegação */
-
-header {
-  background-color: #e29a96;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  top: 0;
-}
-
-.sessaoHeader {
-  margin: 0 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.imgCabecalho {
-  border-radius: 16px;
-  height: 75px;
-  padding: 10px;
-}
-
-.menuHeader {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #65823a;
-  border-radius: 16px 16px 0 0;
-  align-self: flex-end;
-}
-
-.itemMenuHeader {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #f9ebea;
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  transition-duration: 0.4s;
-}
-
-li a:hover{
-  background-color: #ca4941;
-}
+/* Header utilizando o padrão da página home */
 
 /* Estilização do Main  - Conteúdo principal Termos e Política */
 
-.containerTermos {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
+.main {
+  max-width: 1000px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main__container {
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
+  padding: 10px;
 }
 
-h2{
+.main__container > h2 {
+  text-align: center;
   color: #547424;
+  font-size: 28px;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 }
 
-p {
+.main__container > p {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: justify;
 }
 
-/* Estilização do Rodapé */
-
-footer {
-  background-color: #111;
-  color: #f7f7f7;
-  padding: 30px;
-}
-
-.sectionFooter {
-  margin: 0 10%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logoFooter {
-  height: 75px;
-}
-
-.listaMenuFooter {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 16px 16px 0 0;
-}
-
-.linkNavegaFooter a {
-  text-decoration: none;
-  text-align: left;
-}
+/* Estilização do Rodapé utilizando da página home */
