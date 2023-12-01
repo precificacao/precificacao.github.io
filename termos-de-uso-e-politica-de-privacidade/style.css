@@ -44,9 +44,9 @@ html{
 .main__container > h2 {
   text-align: center;
   color: #547424;
-  font-size: 28px;
+  font-size: 1.75rem;
   @media (max-width: 768px) {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }
 
