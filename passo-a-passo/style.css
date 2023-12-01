@@ -23,10 +23,16 @@ html{
       }}
 }
 
+/* Variáveis para padronização de cores e fonte -  Como Utilizar */
+
+:root {
+  --color-background-1: #e29a96;
+}
+
 /* Estilização do header - Top do site - Logo - Menu de navegação */
 
 header {
-  background-color: #e29a96;
+  background-color: var(--color-background-1);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
